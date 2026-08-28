@@ -13,6 +13,9 @@
   --body: "Space Grotesk", sans-serif;
 }
 
+body .hero-visual { overflow: hidden; border-radius: 2px; background-image: linear-gradient(140deg, rgba(8, 11, 19, .12), rgba(8, 11, 19, .7)), url("https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=85"); clip-path: none; }
+body .hero-visual { animation: hero-reveal .9s .1s ease-out both; }
+@keyframes hero-reveal { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--paper); background: var(--ink); font-family: var(--body); line-height: 1.5; }
