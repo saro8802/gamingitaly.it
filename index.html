@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gaming Italy: trova giocatori, partecipa agli eventi ed entra nella community italiana su Discord.">
+  <title>gamingitaly.it | Il gaming parla italiano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navigazione principale">
+      <a class="brand" href="#top" aria-label="Gaming Italy home">
+        <span class="brand-mark">GI</span>
+        <span class="brand-name">gaming<span>italy</span><b>.it</b></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="primary-menu">
+        <a class="nav-link active" href="#top">Home</a>
+        <a class="nav-link" href="#community">Community</a>
+        <a class="nav-link" href="#eventi">Eventi</a>
+        <a class="nav-link" href="#notizie">News</a>
+        <a class="nav-link" href="#chi-siamo">Chi siamo</a>
+        <a class="nav-cta" href="#community">Scopri la community <span aria-hidden="true">↘</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Community online / Italia</p>
+        <h1 id="hero-title">La tua community<br><em>gaming italiana.</em></h1>
+        <p class="hero-intro">Un luogo per incontrarsi, giocare insieme e condividere tutto ciò che nasce intorno al gaming. Il punto di ritrovo è su Discord.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#community">Scopri la community <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="#eventi">Scopri gli eventi <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Illustrazione astratta di un paesaggio digitale gaming" role="img">
+        <div class="hero-grid"></div>
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-sun"></div>
+        <div class="hero-label">PLAY<br><strong>ITALIA</strong></div>
+        <div class="hero-coordinate">45°28' N<br>09°11' E</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Ultimi aggiornamenti">
+      <div class="ticker-label">Stato community</div>
+      <p>Server Discord attivo <span>✦</span> Gruppi, eventi e partite aperte ogni settimana.</p>
+      <div class="ticker-line"></div>
+    </section>
+
+    <section class="community-section section-shell" id="community" aria-labelledby="community-title">
+      <div class="community-intro">
+        <p class="eyebrow">01 / Punto di ritrovo</p>
+        <h2 id="community-title">Qui non giochi<br><em>da solo.</em></h2>
+        <p>Entra, presentati e trova il canale giusto per te. Dal co-op serale al gruppo competitivo, c'è sempre qualcuno con cui fare squadra.</p>
+        <a class="button button-primary" href="#community">Partecipa alla community <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="community-rail" id="eventi">
+        <article class="community-card" id="eventi"><span class="community-icon">◈</span><p class="card-meta">01 / Calendario</p><h3>Eventi community</h3><p>Game night, tornei e appuntamenti da segnare, raccontati qui e organizzati nel server.</p><a class="read-link" href="#notizie">Guarda gli aggiornamenti <span aria-hidden="true">→</span></a></article>
+        <article class="community-card"><span class="community-icon">+</span><p class="card-meta">02 / Archivio</p><h3>Guide e risorse</h3><p>Materiali utili e approfondimenti da consultare quando ti servono, senza perdersi nella chat.</p><a class="read-link" href="#notizie">Esplora i contenuti <span aria-hidden="true">→</span></a></article>
+        <article class="community-card"><span class="community-icon">@</span><p class="card-meta">03 / Showcase</p><h3>Vetrina community</h3><p>Creator, setup, team e progetti dei membri che rendono unico il nostro spazio.</p><a class="read-link" href="#community">Scopri la community <span aria-hidden="true">→</span></a></article>
+      </div>
+    </section>
+
+    <section class="news-section section-shell" id="notizie" aria-labelledby="news-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow orange-eyebrow">02 / Archivio community</p>
+          <h2 id="news-title">News</h2>
+        </div>
+        <a class="text-link" href="#notizie">Vedi archivio <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="news-layout">
+        <article class="featured-card news-card">
+          <div class="card-image image-featured"><span class="card-tag">In evidenza</span><span class="image-stamp">01</span></div>
+          <div class="card-content">
+            <p class="card-meta">Community <span>•</span> 28.08.2026</p>
+            <h3>Le storie, i progetti e le persone dietro ai nostri game night</h3>
+            <p class="card-excerpt">Il blog racconta quello che succede dentro e fuori dal server, senza perdere il focus sulle persone che giocano insieme.</p>
+            <button class="read-link share-article" type="button" data-share="Le storie, i progetti e le persone dietro ai nostri game night">Condividi <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <div class="news-list">
+          <article class="compact-card news-card">
+            <div class="card-image image-compact image-city"><span class="image-stamp">02</span></div>
+            <div class="card-content">
+              <p class="card-meta">Eventi <span>•</span> 27.08.2026</p>
+              <h3>Milano Game Week: tutto quello che c'è da sapere</h3>
+              <button class="read-link share-article" type="button" data-share="Milano Game Week: tutto quello che c'è da sapere">Condividi <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+          <article class="compact-card news-card">
+            <div class="card-image image-compact image-controller"><span class="image-stamp">03</span></div>
+            <div class="card-content">
+              <p class="card-meta">Hardware <span>•</span> 26.08.2026</p>
+              <h3>Next-gen, finalmente: la nostra prova sul campo</h3>
+              <button class="read-link share-article" type="button" data-share="Next-gen, finalmente: la nostra prova sul campo">Condividi <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+          <article class="compact-card news-card">
+            <div class="card-image image-compact image-esports"><span class="image-stamp">04</span></div>
+            <div class="card-content">
+              <p class="card-meta">Esports <span>•</span> 25.08.2026</p>
+              <h3>La scena esports tricolore prepara il prossimo livello</h3>
+              <button class="read-link share-article" type="button" data-share="La scena esports tricolore prepara il prossimo livello">Condividi <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="chi-siamo">
+    <div class="section-shell footer-main">
+      <a class="brand" href="#top" aria-label="Torna in cima">
+        <span class="brand-mark">GI</span>
+        <span class="brand-name">gaming<span>italy</span><b>.it</b></span>
+      </a>
+      <p class="footer-note">Il punto di ritrovo della community gaming italiana. Il server Discord resta il luogo per giocare e parlare insieme.</p>
+    </div>
+    <div class="section-shell footer-bottom">
+      <span>© <span id="current-year">2026</span> gamingitaly.it</span>
+      <div><span>Community in costruzione, insieme.</span></div>
+    </div>
+  </footer>
+</body>
+</html>
