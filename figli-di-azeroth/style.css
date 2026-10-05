@@ -24,7 +24,7 @@ button { font: inherit; }
 .site-header { position: relative; z-index: 3; border-bottom: 1px solid var(--line); background: rgba(6, 19, 33, .88); }
 .nav { display: flex; min-height: 82px; align-items: center; justify-content: space-between; }
 .brand { display: inline-flex; align-items: center; gap: 13px; }
-.brand-crest { display: grid; width: 40px; height: 44px; place-items: center; clip-path: polygon(50% 0, 96% 14%, 88% 72%, 50% 100%, 12% 72%, 4% 14%); color: var(--gold-light); background: linear-gradient(145deg, #168bc2, #06365d 70%); filter: drop-shadow(0 0 5px rgba(216,169,76,.5)); font-family: var(--serif); font-size: 12px; font-weight: 800; }
+.brand-crest { display: block; width: 40px; height: 44px; flex: 0 0 40px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(216,169,76,.5)); }
 .brand-name { font-family: var(--serif); font-size: 15px; font-weight: 700; letter-spacing: .035em; }.brand-name i { color: var(--gold); font-size: 11px; font-style: normal; }
 .menu { display: flex; align-items: center; gap: 34px; color: #c4bdae; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }.menu a:not(.nav-cta):hover, .text-button:hover, .back-top:hover { color: var(--gold-light); }
 .nav-cta { padding: 11px 16px; border: 1px solid rgba(216,177,108,.48); color: var(--gold-light); transition: background .2s, color .2s; }.nav-cta:hover { color: var(--night); background: var(--gold); }.nav-cta span { margin-left: 8px; }
