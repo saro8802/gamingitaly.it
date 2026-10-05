@@ -140,3 +140,5 @@ h1, h2, h3, p { margin-top: 0; }h1, h2, h3 { font-family: var(--serif); font-wei
   .hero h1 { font-size: clamp(46px, 12.5vw, 60px); }
   .hero-lead { font-size: 15px; }
 }
+.button-gold { width: 180px; min-height: 63px; gap: 0; padding-inline: 19px; color: var(--gold); background: transparent url("pulsante.png") center / 100% 100% no-repeat; font-family: var(--serif); font-size: 14px; font-weight: 600; letter-spacing: 0; text-align: center; text-transform: none; }
+.button-gold:hover { color: var(--cream); background: transparent url("pulsante.png") center / 100% 100% no-repeat; filter: brightness(1.08); }
