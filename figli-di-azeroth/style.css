@@ -60,7 +60,7 @@ h1, h2, h3, p { margin-top: 0; }h1, h2, h3 { font-family: var(--serif); font-wei
 .join-emblem i { top: 23%; }
 .join-status { background: rgba(8,38,63,.75); }
 .join-status small { color: #9eb1c1; }
-.menu { background: #071a2c; }
+.menu { padding-left: 16px; background: #071a2c; }
 .menu > a:not(.nav-cta) { border-color: rgba(216,169,76,.12); }
 .hero-art { display: grid; min-height: 0; place-items: center; overflow: visible; border: 0; background: transparent; box-shadow: none; isolation: auto; }
 .hero-art::before { display: none; }
