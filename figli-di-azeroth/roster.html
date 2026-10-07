@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#061321">
+  <meta name="description" content="Consulta il roster dei Figli di Azeroth e le statistiche della gilda.">
+  <title>Roster — Figli di Azeroth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="roster.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Navigazione principale">
+      <a class="brand" href="index.html#inizio" aria-label="Figli di Azeroth, home">
+        <img class="brand-crest" src="icona.png" alt="" aria-hidden="true">
+        <span class="brand-name">Figli <i>di</i> Azeroth</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="menu" id="site-menu">
+        <a href="index.html#gilda">La gilda</a>
+        <a href="index.html#stile">Il nostro stile</a>
+        <a href="roster.html" aria-current="page">Roster</a>
+        <a href="index.html#reclutamento">Reclutamento</a>
+        <a class="nav-cta" href="index.html#reclutamento">Unisciti a noi <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="roster-page wrap">
+    <section class="roster-heading" aria-labelledby="roster-title">
+      <p class="eyebrow"><span class="live-dot"></span> Figli di Azeroth · WoW Forever</p>
+      <h1 id="roster-title">Roster <em>di gilda</em></h1>
+      <p>La compagnia che si prepara a partire per Azeroth.</p>
+    </section>
+
+    <section class="roster-dashboard" aria-label="Statistiche del roster" aria-live="polite">
+      <article class="roster-stat roster-stat-total">
+        <span class="roster-stat-label">Personaggi totali</span>
+        <strong id="member-count">—</strong>
+      </article>
+      <article class="roster-stat">
+        <span class="roster-stat-label">Tank</span>
+        <strong id="tank-count">—</strong>
+      </article>
+      <article class="roster-stat">
+        <span class="roster-stat-label">Healer</span>
+        <strong id="healer-count">—</strong>
+      </article>
+      <article class="roster-stat">
+        <span class="roster-stat-label">DPS</span>
+        <strong id="dps-count">—</strong>
+      </article>
+    </section>
+
+    <section class="roster-overview" aria-labelledby="class-heading">
+      <div class="roster-section-heading">
+        <p class="section-kicker"><span>01</span> Composizione</p>
+        <h2 id="class-heading">Classi <em>in gilda</em></h2>
+      </div>
+      <div class="class-breakdown" id="class-breakdown" aria-live="polite"></div>
+    </section>
+
+    <section class="roster-members" aria-labelledby="members-heading">
+      <div class="roster-section-heading">
+        <p class="section-kicker"><span>02</span> Avventurieri</p>
+        <h2 id="members-heading">I nostri <em>membri</em></h2>
+      </div>
+      <div class="roster-filters">
+        <div class="roster-filter-field">
+          <label for="roster-search">Cerca un membro</label>
+          <input id="roster-search" class="roster-search" type="search" placeholder="Nome, classe, razza o specializzazione" autocomplete="off">
+        </div>
+        <div class="roster-filter-field">
+          <label for="class-filter">Classe</label>
+          <select id="class-filter" class="roster-select">
+            <option value="">Tutte le classi</option>
+          </select>
+        </div>
+        <div class="roster-filter-field">
+          <label for="role-filter">Ruolo</label>
+          <select id="role-filter" class="roster-select">
+            <option value="">Tutti i ruoli</option>
+            <option value="Tank">Tank</option>
+            <option value="Healer">Healer</option>
+            <option value="DPS">DPS</option>
+          </select>
+        </div>
+        <div class="roster-filter-field">
+          <label for="type-filter">Tipo</label>
+          <select id="type-filter" class="roster-select">
+            <option value="Main" selected>Main</option>
+            <option value="Alt">Alt</option>
+          </select>
+        </div>
+      </div>
+      <p class="roster-status" id="roster-status" role="status">Caricamento roster…</p>
+      <div class="roster-table-wrap">
+        <table class="roster-table">
+          <thead>
+            <tr>
+              <th scope="col">Giocatore</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Ruolo</th>
+              <th scope="col">Classe</th>
+              <th scope="col">Razza</th>
+              <th scope="col">Specializzazione</th>
+            </tr>
+          </thead>
+          <tbody id="roster-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-main">
+      <a class="brand" href="index.html#inizio" aria-label="Torna alla pagina della gilda">
+        <img class="brand-crest" src="icona.png" alt="" aria-hidden="true">
+        <span class="brand-name">Figli <i>di</i> Azeroth</span>
+      </a>
+      <p>Una gilda italiana, una nuova avventura.</p>
+      <a class="back-top" href="#roster-title">Torna su ↑</a>
+    </div>
+    <div class="wrap footer-bottom"><span>© <span id="current-year"></span> Figli di Azeroth</span><span>Progetto fan non affiliato a Blizzard Entertainment.</span></div>
+  </footer>
+</body>
+</html>

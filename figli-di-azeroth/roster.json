@@ -1,0 +1,18 @@
+[
+  {
+    "player": "Saro",
+    "role": "Healer",
+    "class": "Priest",
+    "race": "Human",
+    "spec": "Holy",
+    "type": "Main"
+  },
+  {
+    "player": "Eisenach",
+    "role": "Tank",
+    "class": "Warrior",
+    "race": "Human",
+    "spec": "Protection",
+    "type": "Main"
+  }
+]
