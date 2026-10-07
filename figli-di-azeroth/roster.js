@@ -130,17 +130,6 @@ function renderRoster(roster) {
   }
 }
 
-function populateClassFilter(roster) {
-  [...new Set(roster.map((member) => member.class))]
-    .sort((classA, classB) => classA.localeCompare(classB, 'it'))
-    .forEach((className) => {
-      const option = document.createElement('option');
-      option.value = className;
-      option.textContent = className;
-      classFilter.append(option);
-    });
-}
-
 async function initializeRoster() {
   try {
     const response = await fetch('roster.json');
@@ -148,7 +137,6 @@ async function initializeRoster() {
       throw new Error(`Impossibile caricare roster.json (HTTP ${response.status}).`);
     }
     const roster = validateRoster(await response.json());
-    populateClassFilter(roster);
     searchInput.addEventListener('input', () => renderRoster(roster));
     classFilter.addEventListener('change', () => renderRoster(roster));
     roleFilter.addEventListener('change', () => renderRoster(roster));
